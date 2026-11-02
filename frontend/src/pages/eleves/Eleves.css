@@ -1,0 +1,664 @@
+/* ==================================================
+   PAGE ÉLÈVES
+================================================== */
+
+.eleves-page {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: 40px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.eleves-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.eleves-header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.eleves-header p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+/* ==================================================
+   BOUTON AJOUT
+================================================== */
+
+.btn-add-student {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-add-student:hover {
+  background: #1d4ed8;
+}
+
+/* ==================================================
+   RECHERCHE
+================================================== */
+
+.student-search {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.student-search span {
+  font-size: 18px;
+}
+
+.student-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ==================================================
+   LISTE ÉLÈVES
+================================================== */
+
+.students-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ==================================================
+   INFORMATIONS ÉLÈVE
+================================================== */
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.student-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.student-card h3 {
+  margin: 0 0 7px;
+  color: #1f2937;
+}
+
+.student-card p {
+  margin: 5px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ==================================================
+   ACTIONS
+================================================== */
+
+.student-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-edit-student,
+.btn-delete-student,
+.btn-student-sessions {
+  border: none;
+  border-radius: 7px;
+  padding: 9px 13px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Voir séances */
+
+.btn-student-sessions {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btn-student-sessions:hover {
+  background: #e5e7eb;
+}
+
+/* Modifier */
+
+.btn-edit-student {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-edit-student:hover {
+  background: #1d4ed8;
+}
+
+/* Supprimer */
+
+.btn-delete-student {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-delete-student:hover {
+  background: #dc2626;
+}
+
+/* ==================================================
+   ÉTAT VIDE
+================================================== */
+
+.empty-students {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.empty-icon {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.empty-students h3 {
+  color: #1f2937;
+}
+
+.empty-students p,
+.students-loading {
+  color: #6b7280;
+}
+
+/* ==================================================
+   FORMULAIRE
+================================================== */
+
+.student-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.student-form h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+.student-form-group {
+  margin-bottom: 18px;
+}
+
+.student-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.student-form-group input,
+.student-form-group select {
+  width: 100%;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+}
+
+.student-form-group input:focus,
+.student-form-group select:focus {
+  border-color: #2563eb;
+}
+
+.student-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-save-student,
+.btn-cancel-student {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-save-student {
+  background: #16a34a;
+  color: white;
+}
+
+.btn-save-student:hover {
+  background: #15803d;
+}
+
+.btn-cancel-student {
+  background: #6b7280;
+  color: white;
+}
+
+.btn-cancel-student:hover {
+  background: #4b5563;
+}
+
+/* ==================================================
+   MODALE FORMULAIRE
+================================================== */
+
+.student-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.student-form-modal {
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.student-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.student-form-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.student-form-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.student-form-close {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.student-form-close:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.student-form-modal .student-form {
+  padding: 25px 30px 30px;
+  margin: 0;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.student-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.student-form-modal .student-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.student-form-modal .student-form-group label {
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.student-form-modal .student-form-group input,
+.student-form-modal .student-form-group select {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #fff;
+  color: #1f2937;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: 0.2s ease;
+}
+
+.student-form-modal .student-form-group input:focus,
+.student-form-modal .student-form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.student-form-modal .student-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 5px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.student-form-modal .student-form-actions button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.student-form-modal .btn-cancel-student {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.student-form-modal .btn-cancel-student:hover {
+  background: #d1d5db;
+}
+
+.student-form-modal .btn-save-student {
+  background: #2563eb;
+  color: #fff;
+}
+
+.student-form-modal .btn-save-student:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ==================================================
+   MODALE SUPPRESSION ÉLÈVE
+================================================== */
+
+.student-delete-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 2000;
+}
+
+.student-delete-modal {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  animation: studentDeleteModalIn 0.18s ease-out;
+}
+
+@keyframes studentDeleteModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.student-delete-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  font-size: 22px;
+}
+
+.student-delete-modal h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.student-delete-message {
+  margin: 12px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.student-delete-message strong {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.student-delete-warning {
+  margin: 10px 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.student-delete-error {
+  margin-top: 18px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.student-delete-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.student-delete-actions button {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn-student-delete-cancel {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #dbe3ef;
+}
+
+.btn-student-delete-cancel:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.btn-student-delete-confirm {
+  background: #ef4444;
+  color: #fff;
+  border: 1px solid #ef4444;
+}
+
+.btn-student-delete-confirm:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 700px) {
+  .eleves-page {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .eleves-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .student-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .student-actions {
+    width: 100%;
+  }
+
+  .student-actions button {
+    flex: 1;
+  }
+
+  .student-form-overlay {
+    padding: 12px;
+  }
+
+  .student-form-header {
+    padding: 20px;
+  }
+
+  .student-form-modal .student-form {
+    padding: 20px;
+  }
+
+  .student-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .student-form-modal .student-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .student-form-modal .student-form-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .student-delete-overlay {
+    padding: 15px;
+  }
+
+  .student-delete-modal {
+    padding: 25px 20px;
+  }
+
+  .student-delete-actions {
+    flex-direction: column-reverse;
+  }
+
+  .student-delete-actions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,1301 @@
+/* =========================================================
+   PAGE PRINCIPALE
+========================================================= */
+
+.livre-paiements-page {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: 40px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.livre-payment-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.back-button:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateX(-2px);
+}
+
+.livre-payment-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.payment-book-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.page-breadcrumb {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.livre-payment-title h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.livre-payment-title p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.payment-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.payment-summary-card {
+  min-height: 94px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.035);
+}
+
+.summary-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.summary-icon.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.summary-icon.purple {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.summary-icon.green {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.summary-icon.orange {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.summary-icon.teal {
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+.payment-summary-card span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.payment-summary-card strong {
+  display: block;
+  color: #0f172a;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.students-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.students-search {
+  width: 100%;
+  max-width: 620px;
+  height: 48px;
+  padding: 0 14px;
+  background: #ffffff;
+  border: 1px solid #dfe5ec;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.students-search:focus-within {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.students-search > span {
+  font-size: 17px;
+  opacity: 0.65;
+}
+
+.students-search input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.students-search input::placeholder {
+  color: #94a3b8;
+}
+
+.clear-payment-search {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.clear-payment-search:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.search-result-count {
+  flex-shrink: 0;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PAYMENT SECTIONS
+========================================================= */
+
+.payment-section {
+  background: #ffffff;
+  border: 1px solid #e7ecf2;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.035);
+}
+
+.payment-section-header {
+  min-height: 82px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #edf1f5;
+  box-sizing: border-box;
+}
+
+.section-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.section-icon.paid {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.section-icon.unpaid {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.section-title-wrapper h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.section-title-wrapper p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.section-count {
+  min-width: 34px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.paid-count {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.unpaid-count {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.section-empty {
+  min-height: 150px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #64748b;
+}
+
+.section-empty > div {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.section-empty p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.success-empty {
+  background: #fcfffd;
+}
+
+
+/* =========================================================
+   STUDENT LIST
+========================================================= */
+
+.students-list {
+  width: 100%;
+}
+
+.student-payment-row {
+  min-height: 92px;
+  padding: 17px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #edf1f5;
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+
+.student-payment-row:last-child {
+  border-bottom: none;
+}
+
+.student-payment-row:hover {
+  background: #fafcff;
+}
+
+.paid-row:hover {
+  background: #fafffc;
+}
+
+.unpaid-row:hover {
+  background: #fffdf9;
+}
+
+
+/* =========================================================
+   STUDENT INFO
+========================================================= */
+
+.student-main {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.student-avatar {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.paid-avatar {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.unpaid-avatar {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.student-info {
+  min-width: 0;
+}
+
+.student-info h3 {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.student-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.student-details span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   PAYMENT ROW RIGHT
+========================================================= */
+
+.payment-row-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 13px;
+  flex-shrink: 0;
+}
+
+.payment-amount {
+  min-width: 82px;
+  text-align: right;
+}
+
+.payment-amount strong {
+  display: block;
+  color: #047857;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.payment-amount span {
+  display: block;
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.payment-amount.expected strong {
+  color: #c2410c;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.paid-badge,
+.unpaid-badge {
+  min-width: 82px;
+  height: 29px;
+  padding: 0 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.paid-badge {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.unpaid-badge {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+
+/* =========================================================
+   BOUTON ENREGISTRER
+========================================================= */
+
+.record-payment-button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.record-payment-button span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.record-payment-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================================
+   BOUTON ANNULER PAIEMENT
+========================================================= */
+
+.cancel-payment-button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fffafa;
+  color: #dc2626;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cancel-payment-button:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.cancel-payment-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.payment-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  padding: 25px;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.payment-modal {
+  width: 100%;
+  max-width: 650px;
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.22),
+    0 5px 20px rgba(15, 23, 42, 0.08);
+  animation: paymentModalIn 0.2s ease;
+}
+
+@keyframes paymentModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.payment-modal-header {
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.modal-header-content {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.modal-payment-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.payment-modal-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.payment-modal-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.payment-modal-close {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.payment-modal-close:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.payment-modal-close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   CARTE ÉLÈVE
+========================================================= */
+
+.payment-student-card {
+  margin: 20px 24px;
+  padding: 15px;
+  background: #f8fafc;
+  border: 1px solid #e7edf4;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.modal-student-avatar {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.payment-student-card span {
+  display: block;
+  margin-bottom: 3px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.payment-student-card strong {
+  display: block;
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.payment-student-card small {
+  display: block;
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FORMULAIRE
+========================================================= */
+
+.payment-modal form {
+  padding: 0 24px 24px;
+}
+
+.payment-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+.payment-form-group {
+  min-width: 0;
+}
+
+.payment-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.readonly-field,
+.readonly-price {
+  width: 100%;
+  height: 46px;
+  padding: 0 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.readonly-field {
+  gap: 9px;
+}
+
+.readonly-field span {
+  font-size: 17px;
+}
+
+.readonly-field strong {
+  overflow: hidden;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.readonly-price {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.modal-price-input {
+  height: 46px;
+  border: 1px solid #dbe3ec;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.modal-price-input:focus-within {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.modal-price-input input {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  color: #0f172a;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 650;
+  box-sizing: border-box;
+}
+
+.modal-price-input span {
+  padding-right: 13px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modal-date-input {
+  width: 100%;
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid #dbe3ec;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #334155;
+  font-family: inherit;
+  font-size: 13px;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.modal-date-input:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   CONFIRMATION
+========================================================= */
+
+.payment-confirmation {
+  margin-top: 22px;
+  padding: 14px 15px;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  background: #f0fdf4;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.confirmation-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.payment-confirmation strong {
+  display: block;
+  color: #166534;
+  font-size: 13px;
+}
+
+.payment-confirmation span {
+  display: block;
+  margin-top: 3px;
+  color: #4d7c5a;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.payment-modal-actions {
+  margin-top: 24px;
+  padding-top: 19px;
+  border-top: 1px solid #edf1f5;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-cancel-button,
+.modal-save-button {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal-cancel-button {
+  border: 1px solid #dbe3ec;
+  background: #ffffff;
+  color: #475569;
+}
+
+.modal-cancel-button:hover {
+  background: #f8fafc;
+}
+
+.modal-save-button {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal-save-button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.2);
+}
+
+.modal-cancel-button:disabled,
+.modal-save-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.button-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: buttonSpinner 0.7s linear infinite;
+}
+
+@keyframes buttonSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   LOADING / EMPTY PAGE
+========================================================= */
+
+.livre-payment-state {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.livre-payment-state h3 {
+  margin: 16px 0 6px;
+  color: #0f172a;
+  font-size: 19px;
+}
+
+.livre-payment-state p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.payment-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: pageSpinner 0.8s linear infinite;
+}
+
+@keyframes pageSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.payment-empty-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.back-books-button {
+  margin-top: 20px;
+  min-height: 42px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-books-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+  .payment-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .payment-row-right {
+    gap: 9px;
+  }
+
+  .record-payment-button {
+    padding: 0 11px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+  .livre-paiements-page {
+    margin-left: 0;
+    padding: 25px;
+  }
+
+  .payment-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .student-payment-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-main {
+    width: 100%;
+  }
+
+  .payment-row-right {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .payment-amount {
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 650px
+========================================================= */
+
+@media (max-width: 650px) {
+  .livre-paiements-page {
+    padding: 18px;
+  }
+
+  .livre-payment-header {
+    gap: 12px;
+  }
+
+  .back-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .payment-book-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 23px;
+    border-radius: 13px;
+  }
+
+  .livre-payment-title h1 {
+    font-size: 21px;
+  }
+
+  .livre-payment-title p {
+    font-size: 12px;
+  }
+
+  .payment-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .students-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .students-search {
+    max-width: none;
+  }
+
+  .search-result-count {
+    text-align: right;
+  }
+
+  .payment-section-header {
+    padding: 16px;
+  }
+
+  .student-payment-row {
+    padding: 16px;
+  }
+
+  .payment-row-right {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .payment-amount {
+    text-align: left;
+  }
+
+  .paid-badge,
+  .unpaid-badge {
+    width: fit-content;
+  }
+
+  .record-payment-button {
+    width: 100%;
+  }
+
+  .cancel-payment-button {
+    position: absolute;
+    right: 16px;
+  }
+
+  .paid-row {
+    position: relative;
+  }
+
+  .payment-modal-overlay {
+    padding: 12px;
+  }
+
+  .payment-modal {
+    max-height: calc(100vh - 24px);
+    border-radius: 16px;
+  }
+
+  .payment-modal-header {
+    padding: 18px;
+  }
+
+  .payment-student-card {
+    margin: 16px 18px;
+  }
+
+  .payment-modal form {
+    padding: 0 18px 18px;
+  }
+
+  .payment-form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .payment-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .modal-cancel-button,
+  .modal-save-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 430px
+========================================================= */
+
+@media (max-width: 430px) {
+  .livre-paiements-page {
+    padding: 14px;
+  }
+
+  .livre-payment-title {
+    gap: 10px;
+  }
+
+  .page-breadcrumb {
+    font-size: 11px;
+  }
+
+  .livre-payment-title h1 {
+    font-size: 18px;
+  }
+
+  .livre-payment-title p {
+    display: none;
+  }
+
+  .payment-summary-card {
+    min-height: 82px;
+    padding: 14px;
+  }
+
+  .summary-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .payment-summary-card strong {
+    font-size: 17px;
+  }
+
+  .section-title-wrapper h2 {
+    font-size: 15px;
+  }
+
+  .section-title-wrapper p {
+    font-size: 11px;
+  }
+
+  .student-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .student-info h3 {
+    font-size: 13px;
+  }
+
+  .payment-modal-header h2 {
+    font-size: 16px;
+  }
+
+  .payment-modal-header p {
+    font-size: 11px;
+  }
+}
